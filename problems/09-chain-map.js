@@ -29,9 +29,15 @@ console.log(chainMap(4, square, half));         // 8
 console.log(chainMap(4, half, square));         // 4
 *******************************************************************************/
 
-function chainMap(val, ...callbacks) {
-  // Your code here
-}
+  function chainMap(value, ...callbacks) {
+
+    let result = value;
+
+    for (const callback of callbacks) {
+      result = callback(result);
+    }
+    return result;
+  }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

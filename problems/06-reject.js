@@ -22,7 +22,15 @@ console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth'
 *******************************************************************************/
 
 function reject(array, cb) {
-  // Your code here
+  let selectedItems = [];
+
+  for (let i = 0 ; i < array.length; i ++){
+
+      if(!cb(array[i])){
+          selectedItems.push(array[i])
+      }
+}
+return selectedItems;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

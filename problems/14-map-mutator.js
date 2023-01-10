@@ -18,9 +18,13 @@ mapMutator(arr2, function (el, i) {
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
 
-function mapMutator(array, cb) {
-  // Your code here
+function mapMutator(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+      array[i] = callback(array[i], i);
+  }
+  return array;
 }
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
